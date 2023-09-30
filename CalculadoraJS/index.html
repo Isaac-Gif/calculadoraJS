@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora Básica</title>
+</head>
+<body>
+
+<script>
+ 
+  var operacion = parseInt(prompt("Elije la operación:\n1. Suma\n2. Resta\n3. Multiplicación\n4. División"));
+
+
+  if (operacion < 1 || operacion > 4) {
+    document.write("Operación no válida.");
+  } else {
+   
+    var num1 = parseFloat(prompt("Ingrese el primer número:"));
+    var num2 = parseFloat(prompt("Ingrese el segundo número:"));
+
+    
+    var resultado;
+    if (operacion === 1) {
+      resultado = num1 + num2;
+      document.write("Resultado de la suma: " + resultado);
+    } else if (operacion === 2) {
+      resultado = num1 - num2;
+      document.write("Resultado de la resta: " + resultado);
+    } else if (operacion === 3) {
+      resultado = num1 * num2;
+      document.write("Resultado de la multiplicación: " + resultado);
+    } else {
+     
+      if (num2 === 0) {
+        document.write("No se puede dividir por cero.");
+      } else {
+        resultado = num1 / num2;
+        document.write("Resultado de la división: " + resultado);
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
